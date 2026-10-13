@@ -1,0 +1,147 @@
+/* Large, high-contrast defaults so the app reads well on a projector. */
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 18px;
+  color: #1d2330;
+  background: #f4f5f7;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #1d2330;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #dde1e7;
+  text-align: left;
+}
+
+tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #1d2330;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: #eef3ff;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 1rem 0;
+}
+
+button {
+  background: #2457d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+button.secondary {
+  background: #dde1e7;
+  color: #1d2330;
+}
+
+button.danger {
+  background: #c62f2f;
+}
+
+button.link {
+  background: none;
+  color: #2457d6;
+  padding: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #c62f2f;
+}
+
+.badge {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-draft {
+  background: #dde1e7;
+}
+
+.badge-submitted {
+  background: #ffe8a3;
+}
+
+.badge-approved {
+  background: #c8f0d0;
+}
+
+.badge-rejected {
+  background: #f8c9c9;
+}

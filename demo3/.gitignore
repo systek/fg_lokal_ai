@@ -1,0 +1,14 @@
+# Frontend
+node_modules/
+dist/
+
+# Backend
+build/
+.gradle/
+.kotlin/
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+*.tsbuildinfo

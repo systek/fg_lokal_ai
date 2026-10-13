@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: reiseregning
+  r2dbc:
+    # In-memory H2: data is reset on every restart. DB_CLOSE_DELAY keeps it alive between connections.
+    url: r2dbc:h2:mem:///reiseregning;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  sql:
+    init:
+      # Run schema.sql and data.sql on startup (Spring Boot also does this for R2DBC).
+      mode: always
+
+server:
+  port: 8080

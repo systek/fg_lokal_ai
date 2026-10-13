@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: romby
+  r2dbc:
+    # DB_CLOSE_DELAY=-1 keeps the in-memory database alive between connections.
+    # CASE_INSENSITIVE_IDENTIFIERS=TRUE: Spring Data 4 quotes every table/column name
+    # ("booking"."ROOM_ID"), and quoted names are case-sensitive in H2. This lets them
+    # match the unquoted names in schema.sql regardless of case.
+    url: r2dbc:h2:mem:///romby;DB_CLOSE_DELAY=-1;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    username: sa
+    password:
+  sql:
+    init:
+      # schema.sql and data.sql run on every startup, so you always start with fresh seed data.
+      mode: always
+  web:
+    error:
+      # Include the ResponseStatusException reason in error responses so the UI can show it.
+      # (Spring Boot 4 moved this from server.error.* to spring.web.error.*.)
+      include-message: always
+
+server:
+  port: 8080

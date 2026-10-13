@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: kanban-lite
+  r2dbc:
+    # In-memory H2 via the reactive R2DBC driver. DB_CLOSE_DELAY=-1 keeps the DB alive
+    # between connections; everything is reset on restart.
+    url: r2dbc:h2:mem:///kanban;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  sql:
+    init:
+      # Run schema.sql + data.sql on startup
+      mode: always
+  web:
+    error:
+      # Include the ResponseStatusException reason in error bodies (off by default).
+      # (Spring Boot 4 moved this from server.error.* to spring.web.error.*.)
+      include-message: always
+
+server:
+  port: 8080
+
+logging:
+  level:
+    # Set to DEBUG to see the SQL that R2DBC actually runs (handy for exercise 3)
+    org.springframework.r2dbc.core: INFO
