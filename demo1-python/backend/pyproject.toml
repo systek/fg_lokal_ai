@@ -1,0 +1,20 @@
+[project]
+name = "romby"
+version = "0.0.1"
+description = "Romby: meeting-room booking (Python version of demo1)"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.143.0",
+    "sqlalchemy>=2.1.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+# Lets tests `import romby` without installing the project as a package.
+pythonpath = ["."]
