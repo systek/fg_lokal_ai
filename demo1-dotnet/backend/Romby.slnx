@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Romby.Api/Romby.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Romby.Api.Tests/Romby.Api.Tests.csproj" />
+  </Folder>
+</Solution>
